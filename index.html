@@ -1,57 +1,246 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <title>Café da Manhã</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="lib/css/style.css">
     </head>
     <body>
-        <header class="navbar navbar-expand-lg sticky-top">
-            <div class="container lh-sm">
-                <h1 class="fs-1 navbar-brand m-0">Nome do Restaurante</h1>
+        <header id="navbar" class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <h1 class="fs-1 title navbar-brand m-0"><i class="bi bi-cup-fill"></i> Café da Manhã</h1>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <nav id="nav-menu" class="navbar-collapse collapse justify-content-end">
                     <ul class="nav nav-pills d-block d-md-flex">
-                        <li class="nav-item"><a class="nav-link me-1  active" href=""><i class="bi bi-house-door"></i> Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link me-1" href=""><i class="bi bi-calendar-check"></i> Eventos</a></li>
-                        <li class="nav-item"><a class="nav-link me-1" href=""><i class="bi bi-journal"></i> Cardápio</a></li>
-                        <li class="nav-item"><a class="nav-link me-1" href=""><i class="bi bi-chat-right-text"></i> Contato</a></li>
+                        <li class="nav-item"><a class="nav-link me-1 fw-bold" href="#about"><i class="bi bi-house-door"></i> Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link me-1 fw-bold" href="#events"><i class="bi bi-calendar-check"></i> Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link me-1 fw-bold" href="#menu"><i class="bi bi-journal"></i> Cardápio</a></li>
+                        <li class="nav-item"><a class="nav-link me-1 fw-bold" href="#contact"><i class="bi bi-chat-right-text"></i> Contato</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section id="about">
-            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000"><img src="https://placehold.co/1440x432/orange/white"/></div>
-                    <div class="carousel-item" data-bs-interval="3000"><img src="https://placehold.co/1440x432/teal/white"/></div>
-                    <div class="carousel-item" data-bs-interval="3000"><img src="https://placehold.co/1440x432/purple/white"/></div>
+        <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+            <section id="about">
+                <div class="carousel slide w-100" data-bs-ride="carousel" id="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000"><img class="w-100" src="lib/imgs/michiel-leunens-OQ6ZoWhYVGY-unsplash.jpg"/></div>
+                        <div class="carousel-item" data-bs-interval="3000"><img class="w-100" src="lib/imgs/robert-bye-F2eHfMwIOxA-unsplash.jpg"/></div>
+                        <div class="carousel-item" data-bs-interval="3000"><img class="w-100" src="lib/imgs/firza-pratama-1BEAIg-79H0-unsplash.jpg"/></div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    </div>
                 </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                <div class="container py-5 px-5">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block h-auto w-100 rounded">
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="title mt-3 mt-md-0">Sobre Nós</h2>
+                            <p>Nós como fanaticos por café e queremos compartilhar essa paixão no mundo, tentando oferecer o melhor que nós podemos</p>
+                            <h3 class="title mt-3 mt-md-0">Sobre o Espaço</h3>
+                            <p>O espaço contém até 120 pessoas</p>
+                            <ul>
+                                <li>Quieto</li>
+                                <li>Calmo</li>
+                                <li>Ar Condicionado</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="container pt-5 pb-5">
+            </section>
+            <section class="container py-5 px-5" id="events">
                 <div class="row">
-                    <div class="col-md-5">
-                        <img src="https://placehold.co/800x600/orange/white" class="d-block w-100 rounded" alt="">
+                    <h2 class="title text-center">Para as suas manhãs</h2>
+                </div>
+                <div class="row mt-4 text-center">
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1454916286212-0ea211dc68d6?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 rounded mb-2" alt="">
+                        <h4><i class="bi bi-brightness-alt-high-fill"></i> Manhãs</h4>
+                        <p>Para os passaros que acordam cedo na hora do rush ou na para pro lanche do trabalho estaremos aqui para te atender</p>
                     </div>
-                    <div class="col-md-7">
-                        <h2 class="section-title">Sobre</h2>
-                        <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
-                        <h3 class="section-title">Sobre</h3>
-                        <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1542338332-76971ae8c292?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 rounded mb-2" alt="">
+                        <h4><i class="bi bi-arrow-through-heart-fill"></i> Ponto de Encontros</h4>
+                        <p>Conseguiu um encontro com aquela pessoa especial do app ? Nós estamos aqui para te dar as melhores chances para segundas</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 rounded mb-2" alt="">
+                        <h4><i class="bi bi-moon-fill"></i> Para as Corujas</h4>
+                        <p>De noite nós temos um novo rosto, jazz é o nome do jogo</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            </section>
+            <section id="menu" class="container py-5 px-5">
+                <div class="row mb-4">
+                    <h2 class="title text-center">Cardápio</h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#coffes" class="fw-bold nav-link active"><i class="material-symbols-outlined">coffee</i> Cafés</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#juices" class="fw-bold nav-link"><i class="material-symbols-outlined">blender</i> Sucos</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#savories" class="fw-bold nav-link"><i class="material-symbols-outlined">bakery_dining</i> Salgadinhos</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#sweets" class="fw-bold nav-link"><i class="material-symbols-outlined">cookie</i> Doces</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="coffes">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/05/31/10/54/coffee-791045_1280.jpg" />
+                                        <h5 class="fw-bold mt-2">Café</h5>
+                                        <p>O classico, café puro</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2021/04/05/21/32/coffee-6154681_1280.jpg" />
+                                        <h5 class="fw-bold mt-2">Cappuccino</h5>
+                                        <p>Cappuccino o menino mais popular do colégio, feito com espresso e leite espumado com uma espuma no topo</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2021/01/06/10/11/coffee-5893926_1280.jpg" />
+                                        <h5 class="fw-bold mt-2">Frappuccino</h5>
+                                        <p>Frappuccino, algo um pouco fora do comum, servido gelado com leite e gelo, se parecendo mais com um milkshake</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+                                        <h5 class="fw-bold mt-2">Espresso</h5>
+                                        <p>Espresso, é para os corajosos, mai forte que o café normal e tendo um "soco" mais poderoso</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="juices">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://cdn.pixabay.com/photo/2022/09/29/04/22/orange-juice-7486518_1280.jpg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Suco de Laranja</h5>
+                                        <p>Substituto do café, dizem que o suco de laranja tem um efeito semelhante a o café</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.unsplash.com/photo-1457518919282-b199744eefd6?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Suco de Uva</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.unsplash.com/photo-1606673993554-a5f993a16e0d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Suco de Maracujá</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Suco de Melância</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="savories">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://img.freepik.com/fotos-gratis/pessoa-segurando-queijo-bolas-em-tigela-madeira_23-2148039722.jpg?w=826&t=st=1714286760~exp=1714287360~hmac=60e6ae236a2dd14fed8c003a3b90f45bdf79607927e7e50616ee10afc5698e2d" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Pão de Queijo</h5>
+                                        <p>Pão de queijo, todo mundo conhece, e nunca deve faltar</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://img.freepik.com/fotos-gratis/deliciosa-variedade-de-comida-plana_23-2148859608.jpg?w=826&t=st=1714286955~exp=1714287555~hmac=b00db66610e8b3b37ba38d67427e29c6455f1af81aa4bc34b78c0b9d023af756" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Pastel</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.pexels.com/photos/11842176/pexels-photo-11842176.jpeg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Quibe</h5>
+                                        <p>Você sabia que quibe é arabe ?</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://img.freepik.com/fotos-gratis/composicao-de-close-up-com-deliciosa-comida-brasileira_23-2148739181.jpg?w=826&t=st=1714287137~exp=1714287737~hmac=b3276e7ac160f6aac0f19c543090dce3209c8dbf62b64954e725f783772088e8" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Coxinha</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="sweets">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="https://cdn.pixabay.com/photo/2022/09/07/13/29/muffins-7438775_1280.jpg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Cupcake</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_1280.jpg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Bolos</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://cdn.pixabay.com/photo/2019/03/24/14/23/bread-4077812_1280.jpg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Croissant Recheado</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://cdn.pixabay.com/photo/2019/04/15/17/25/pastries-4129826_1280.jpg" class="d-block w-100">
+                                        <h5 class="fw-bold mt-2">Pão Doce</h5>
+                                        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="container py-5 px-5">
+                <div class="row">
+                    <h2 class="title mb-4 text-center">Contate nos</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form id="contact-form">
+                            <div class="mb-3 form-group">
+                                <label for="email" class="form-label fw-bold">Seu Email</label>
+                                <input type="email" id="email" class="form-control item" required>
+                            </div>
+                            <div class="mb-3 form-group">  
+                                <label for="telephone" class="form-label fw-bold">Seu Telefone (Opcional)</label>
+                                <input type="tel" id="telephone" class="form-control item">
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="message" class="form-label fw-bold">Sua Mensagem</label>
+                                <textarea id="message" class="form-control item" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2 fw-bold">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h4><i class="bi bi-person-circle"></i> Redes Sociais</h4>
+                            <ul clas="list-group">
+                                <li class="list-group-item fs-4"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li class="list-group-item fs-4"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                <li class="list-group-item fs-4"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <h4><i class="material-symbols-outlined">storefront</i> Endereço</h4>
+                            <p>Rua Planeta Terra, 123, Cidade Sistema Solar, Estado Via Láctea, CEP: 12345-678</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="lib/js/jquery-3.7.1.min.js"></script>
+        <script src="lib/js/jquery-plugins/jquery.mask.min.js"></script>
+        <script src="lib/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/js/main.js"></script>
     </body>
 </html>
